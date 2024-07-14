@@ -1,12 +1,14 @@
 import { Admin, Resource } from "react-admin";
-import jsonServerProvider from "ra-data-json-server";
 import { PosterList } from "./Components/PostersList";
 import { PosterCreate } from "./Components/PosterCreate";
 import { PosterEdit } from "./Components/PosterEdit";
 import { CategoryList } from "./Components/CategoryList";
 import { CategoryEdit } from "./Components/CategoryEdit";
 import { CategoryCreate } from "./Components/CategoryCreate";
-const dataProvider = jsonServerProvider("http://localhost:3000");
+import jsonServerProvider from 'ra-data-json-server'
+const dataProvider = jsonServerProvider('http://localhost:3000')
+
+
 const App = () => {
   return (
     <Admin dataProvider={dataProvider}>
